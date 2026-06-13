@@ -1,0 +1,48 @@
+Frustrated by silent drops from 5G to 4G? SignalSense alerts you the instant your network changes — so you're always the first to know.
+
+SignalSense watches your mobile network 24/7 and alerts you the instant your connection changes — so you always know if you're on 5G, 4G, 3G, or 2G.
+
+KEY FEATURES
+
+🔔 Instant Alerts
+Get notified the moment your network drops from 5G to 4G, or 4G to 3G. Stop wondering why your video buffered — know exactly why.
+
+📡 5G SA and NSA Detection
+Accurately distinguishes between 5G Standalone (SA) and Non-Standalone (NSA) connections — not just "5G".
+
+🎵 Custom Ringtones & Vibration Control
+Choose your own custom ringtone and control vibration settings for network alerts.
+
+📊 Live Speed and Ping
+See your real-time download speed and latency directly on the home screen. Updated every second from your device.
+
+📞 Call-Aware Alerts
+Alerts are automatically held during active phone calls and fired after the call ends. No interruptions at the wrong moment.
+
+🛡️ Anti-Spam Debouncing
+Rapid signal fluctuations are detected and grouped into a single "unstable signal" alert instead of spamming your notification shade.
+
+📋 Switch History Log
+Every network change is logged with a timestamp and network speed. Review your full connection history at any time.
+
+🎛️ Fully Customizable Alerts
+Choose exactly which transitions alert you:
+• Network Upgrade
+• Network Downgrade
+• Any network change
+• Mobile data lost / restored
+
+⚙️ Smart Auto-Start / Auto-Stop
+Monitoring can automatically start when mobile data turns on and stop when it turns off — completely hands-free.
+
+🔄 Boot Auto-Start
+Optionally start monitoring automatically every time your phone boots.
+
+📱 Dual SIM Support
+Choose which SIM slot to monitor or use Auto mode to always follow your active data SIM.
+Switches instantly when you change your default data SIM.
+
+🔋 Battery-Friendly
+Uses a lightweight foreground service with minimal battery impact. Built for all-day use.
+
+No ads. No tracking. No data collected. 100% private and open source.

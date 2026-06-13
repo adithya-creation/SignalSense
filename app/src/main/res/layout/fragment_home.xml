@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_app">
+
+    <!-- Main scrollable content — pb-32 → paddingBottom 128dp -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:paddingBottom="84dp"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="48dp"
+            android:paddingHorizontal="24dp">
+
+            <!-- ── Header Row (matches Lovable header section) ── -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp">
+
+                <!-- Left: SIGNAL SENSE label + Network Monitor h1 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SIGNAL SENSE"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/geist"
+                        android:textStyle="normal"
+                        android:letterSpacing="0.22"
+                        android:textAllCaps="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Network Monitor"
+                        android:textColor="@color/text_primary"
+                        android:textSize="24sp"
+                        android:fontFamily="@font/geist"
+                        android:textStyle="normal"
+                        android:letterSpacing="-0.02" />
+                </LinearLayout>
+
+                <!-- Right: "LIVE" badge — shown when monitoring is active -->
+                <LinearLayout
+                    android:id="@+id/badgeLive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:background="@drawable/bg_live_badge"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <!-- Pulsing green dot -->
+                    <FrameLayout
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:layout_marginEnd="6dp">
+                        <View
+                            android:id="@+id/viewPulseOuter"
+                            android:layout_width="6dp"
+                            android:layout_height="6dp"
+                            android:background="@drawable/pulse_dot"
+                            android:alpha="0.6" />
+                        <View
+                            android:layout_width="6dp"
+                            android:layout_height="6dp"
+                            android:background="@drawable/pulse_dot" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LIVE"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="10sp"
+                        android:fontFamily="@font/geist"
+                        android:textStyle="normal"
+                        android:letterSpacing="0.12" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!-- ── Permission Banner ── -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/bannerPermission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/banner_bg"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/banner_stroke"
+                tools:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="14dp">
+
+                    <TextView
+                        android:id="@+id/tvPermissionWarning"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/banner_text"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/geist"
+                        tools:text="Phone state permission required" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnGrantPermission"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btn_grant"
+                        android:textColor="@color/accent"
+                        android:fontFamily="@font/geist"
+                        android:minHeight="36dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ── Main Network Card ── matches Lovable "section.relative.overflow-hidden.rounded-3xl.border.border-border.bg-card.p-8" -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardNetworkStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/bg_card"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/card_border">
+
+                <!-- Glow background (positioned relative to the card container) -->
+                <View
+                    android:id="@+id/viewNetworkGlow"
+                    android:layout_width="220dp"
+                    android:layout_height="220dp"
+                    android:layout_gravity="center_horizontal|top"
+                    android:translationY="-110dp"
+                    android:background="@drawable/glow_circle"
+                    android:alpha="0.3" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="24dp"
+                    android:paddingHorizontal="24dp"
+                    android:gravity="center_horizontal">
+
+                    <!-- Colored circle — h-36 w-36 = 144dp -->
+                    <FrameLayout
+                        android:layout_width="144dp"
+                        android:layout_height="144dp">
+
+                        <View
+                            android:id="@+id/viewBadgeCircle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/circle_network_badge" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvNetworkBadge"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textColor="#0F1117"
+                                android:textSize="40sp"
+                                android:fontFamily="@font/geist"
+                                android:textStyle="bold"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="-0.03"
+                                tools:text="5G" />
+
+                            <TextView
+                                android:id="@+id/tvNetworkBadgeSubtype"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#0F1117"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/geist"
+                                android:textStyle="bold"
+                                android:visibility="gone"
+                                tools:text="SA"
+                                tools:visibility="visible" />
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <!-- Subtitle below circle — mt-5 text-sm text-muted-foreground -->
+                    <TextView
+                        android:id="@+id/tvCarrierName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/accent"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/geist"
+                        android:visibility="gone"
+                        tools:text="Jio True5G" />
+
+                    <TextView
+                        android:id="@+id/tvNetworkSubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/geist"
+                        tools:text="Standalone 5G — full speed core" />
+
+                    <!-- Speed + Ping — mt-6 grid grid-cols-2 gap-3 (two separate sub-cards) -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="24dp"
+                        android:weightSum="2">
+
+                        <!-- Speed sub-card -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="6dp"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="0dp"
+                            app:cardBackgroundColor="@color/bg_app"
+                            app:strokeWidth="1dp"
+                            app:strokeColor="@color/card_border">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <!-- Icon + Label row: "⟳ SPEED" -->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="SPEED"
+                                    android:textColor="@color/text_secondary"
+                                    android:textSize="9sp"
+                                    android:fontFamily="@font/geist"
+                                    android:letterSpacing="0.18"
+                                    android:drawableStart="@drawable/ic_gauge"
+                                    android:drawablePadding="6dp" />
+
+                                <!-- Value + unit -->
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="bottom"
+                                    android:layout_marginTop="4dp">
+
+                                    <TextView
+                                        android:id="@+id/tvSpeedValue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="—"
+                                        android:textColor="@color/text_primary"
+                                        android:textSize="22sp"
+                                        android:fontFamily="@font/geist"
+                                        android:textStyle="normal"
+                                        android:includeFontPadding="false"
+                                        tools:text="412.6" />
+
+                                    <TextView
+                                        android:id="@+id/tvSpeedUnit"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_marginBottom="3dp"
+                                        android:text="Mbps"
+                                        android:textColor="@color/text_secondary"
+                                        android:textSize="9sp"
+                                        android:fontFamily="@font/geist"
+                                        android:letterSpacing="0.1" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <!-- Ping sub-card -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginStart="6dp"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="0dp"
+                            app:cardBackgroundColor="@color/bg_app"
+                            app:strokeWidth="1dp"
+                            app:strokeColor="@color/card_border">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="PING"
+                                    android:textColor="@color/text_secondary"
+                                    android:textSize="9sp"
+                                    android:fontFamily="@font/geist"
+                                    android:letterSpacing="0.18" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="bottom"
+                                    android:layout_marginTop="4dp">
+
+                                    <TextView
+                                        android:id="@+id/tvPingValue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="—"
+                                        android:textColor="@color/text_primary"
+                                        android:textSize="22sp"
+                                        android:fontFamily="@font/geist"
+                                        android:textStyle="normal"
+                                        android:includeFontPadding="false"
+                                        tools:text="18" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_marginBottom="3dp"
+                                        android:text="ms"
+                                        android:textColor="@color/text_secondary"
+                                        android:textSize="9sp"
+                                        android:fontFamily="@font/geist"
+                                        android:letterSpacing="0.1" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Hidden legacy views (kept for code compatibility) -->
+            <TextView
+                android:id="@+id/tvSpeedStats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardSubtypeBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/accent"
+                app:strokeWidth="0dp" />
+
+            <!-- ── 5G NSA Info Banner — rounded-2xl border colored bg ── -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardBanner5gNsa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/warning_bg"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/warning_text">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="14dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⚠"
+                        android:textSize="14sp"
+                        android:textColor="@color/warning_text"
+                        android:layout_marginEnd="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5G NSA — control plane still on LTE core"
+                        android:fontFamily="@font/geist"
+                        android:textColor="@color/text_primary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ── 4G Info Banner ── -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardBanner4g"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="#1AFBBF24"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/color_4g">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="14dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⚠"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_4g"
+                        android:layout_marginEnd="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="On 4G — daily data cap is now being used"
+                        android:fontFamily="@font/geist"
+                        android:textColor="@color/text_primary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ── No Data Banner ── -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardBannerNoData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="#1AF87171"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/color_2g">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="14dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="✕"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_2g"
+                        android:layout_marginEnd="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mobile data unavailable"
+                        android:fontFamily="@font/geist"
+                        android:textColor="@color/text_primary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ── Action Button: Start / Stop Monitoring ── -->
+            <!-- matches: "mt-5 flex w-full items-center justify-center gap-2 rounded-2xl py-4 text-sm font-semibold" -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnToggleMonitoring"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/btn_start_monitoring"
+                android:textAllCaps="true"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/geist"
+                android:textColor="@color/accent_text_on"
+                app:cornerRadius="20dp"
+                app:backgroundTint="@color/btn_start"
+                android:layout_marginBottom="12dp" />
+
+            <!-- ── Statistics Row — 3 separate rounded-2xl cards, gap-3 ── -->
+            <!-- matches: "mt-5 grid grid-cols-3 gap-3" -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp"
+                android:weightSum="3">
+
+                <!-- Switches card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/bg_card"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/card_border">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="14dp">
+
+                        <TextView
+                            android:id="@+id/tvSwitchCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/text_primary"
+                            android:textSize="22sp"
+                            android:fontFamily="@font/geist"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/stat_switches"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="9sp"
+                            android:fontFamily="@font/geist"
+                            android:letterSpacing="0.18"
+                            android:textAllCaps="true" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Downgrades card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="3dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/bg_card"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/card_border">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="14dp">
+
+                        <TextView
+                            android:id="@+id/tvDowngradeCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/destructive"
+                            android:textSize="22sp"
+                            android:fontFamily="@font/geist"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/stat_downgrades"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="9sp"
+                            android:fontFamily="@font/geist"
+                            android:letterSpacing="0.18"
+                            android:textAllCaps="true" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Uptime card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/bg_card"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/card_border">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="14dp">
+
+                        <TextView
+                            android:id="@+id/tvUptime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00:00"
+                            android:textColor="@color/text_primary"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/geist"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/stat_uptime"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="9sp"
+                            android:fontFamily="@font/geist"
+                            android:letterSpacing="0.18"
+                            android:textAllCaps="true" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

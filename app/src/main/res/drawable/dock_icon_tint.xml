@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Active: dark icon on bright mint green pill (matches Lovable: text-primary-foreground = #16161F) -->
+    <item android:state_checked="true" android:color="#16161F" />
+    <!-- Inactive: muted grey (#70708A ≈ oklch muted-foreground) -->
+    <item android:color="#70708A" />
+</selector>

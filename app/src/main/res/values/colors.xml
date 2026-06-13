@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ═══════════════════════════════════════════════════════
+         LOVABLE REFERENCE PALETTE (OKLCH → HEX CONVERTED)
+         Source: deep-hues-redesign-main/src/styles.css
+    ═══════════════════════════════════════════════════════════ -->
+
+    <!-- Backgrounds -->
+    <color name="bg_app">#16161F</color>          <!-- oklch(0.14 0.005 270) -->
+    <color name="bg_surface">#1E1E28</color>       <!-- oklch(0.18 0.006 270) -->
+    <color name="bg_card">#1E1E28</color>          <!-- oklch(0.18 0.006 270) -->
+    <color name="bg_nav">#1E1E28</color>
+    <color name="bg_divider">#0AFFFFFF</color>     <!-- oklch(1 0 0 / 4%) -->
+
+    <!-- Primary — bright mint/green -->
+    <color name="accent">#4ADE80</color>           <!-- oklch(0.78 0.16 160) -->
+    <color name="accent_dark">#14532D</color>      <!-- primary-foreground bg for text on green -->
+    <color name="accent_dim">#204ADE80</color>     <!-- ~12% alpha of accent -->
+    <color name="accent_text_on">#16161F</color>   <!-- dark text ON the green button -->
+
+    <!-- Network type semantic colors (matching Lovable tokens) -->
+    <color name="color_5g_sa">#4ADE80</color>      <!-- net-5g: oklch(0.78 0.18 150) bright green -->
+    <color name="color_5g_nsa">#67E8F9</color>     <!-- net-5g-nsa: oklch(0.80 0.13 220) cyan -->
+    <color name="color_5g">#4ADE80</color>
+    <color name="ic_launcher_background">#16161F</color>
+    <color name="color_4g">#FBBF24</color>         <!-- net-4g: oklch(0.76 0.17 60) amber -->
+    <color name="color_3g">#F97316</color>         <!-- net-3g: oklch(0.74 0.16 55) orange -->
+    <color name="color_2g">#F87171</color>         <!-- net-2g: oklch(0.68 0.20 20) coral-red -->
+    <color name="color_no_data">#8B8B9E</color>    <!-- net-none: oklch(0.55 0.01 270) -->
+
+    <!-- Semantic roles -->
+    <color name="color_downgrade">#F87171</color>
+    <color name="color_upgrade">#4ADE80</color>
+    <color name="color_data_lost">#8B8B9E</color>
+    <color name="destructive">#F87171</color>
+
+    <!-- Text -->
+    <color name="text_primary">#F7F7FA</color>     <!-- oklch(0.97 0.005 270) -->
+    <color name="text_secondary">#9090A0</color>   <!-- oklch(0.62 0.01 270) -->
+    <color name="text_muted">#9090A0</color>
+
+    <!-- Borders / dividers -->
+    <color name="stroke_default">#10FFFFFF</color> <!-- oklch(1 0 0 / 6%) -->
+    <color name="stroke_strong">#18FFFFFF</color>  <!-- 9% white -->
+    <color name="card_border">#10FFFFFF</color>
+    <color name="dock_stroke">#14FFFFFF</color>
+
+    <!-- Buttons -->
+    <color name="btn_start">#4ADE80</color>
+    <color name="btn_start_ripple">#22C55E</color>
+    <color name="btn_stop">#F87171</color>
+    <color name="btn_stop_ripple">#EF4444</color>
+    <color name="destructive_ripple">#DC2626</color>
+
+    <!-- Dock -->
+    <color name="dock_background">#1E1E28</color>
+    <color name="dock_ripple">#154ADE80</color>
+
+    <!-- Badge backgrounds (10% alpha of badge color) -->
+    <color name="badge_5g_sa_bg">#184ADE80</color>
+    <color name="badge_5g_nsa_bg">#1867E8F9</color>
+    <color name="badge_5g_bg">#184ADE80</color>
+    <color name="badge_4g_bg">#18FBBF24</color>
+    <color name="badge_3g_bg">#18F97316</color>
+    <color name="badge_2g_bg">#18F87171</color>
+    <color name="badge_no_data_bg">#188B8B9E</color>
+
+    <!-- Card / surface extras -->
+    <color name="card_background">#1E1E28</color>
+    <color name="card_stroke">#10FFFFFF</color>
+    <color name="divider">#0AFFFFFF</color>
+    <color name="divider_subtle">#0AFFFFFF</color>
+
+    <!-- Permission banner -->
+    <color name="banner_bg">#154ADE80</color>
+    <color name="banner_stroke">#4ADE80</color>
+    <color name="banner_text">#4ADE80</color>
+
+    <!-- Warning card -->
+    <color name="warning_bg">#18F97316</color>
+    <color name="warning_text">#F97316</color>
+
+    <!-- Pulse dot -->
+    <color name="pulse_active">#4ADE80</color>
+    <color name="pulse_inactive">#8B8B9E</color>
+
+    <!-- Material3 theme aliases -->
+    <color name="md_theme_light_primary">#4ADE80</color>
+    <color name="md_theme_light_onPrimary">#16161F</color>
+    <color name="md_theme_light_primaryContainer">#14532D</color>
+    <color name="md_theme_light_onPrimaryContainer">#BBFFD6</color>
+    <color name="md_theme_light_secondary">#67E8F9</color>
+    <color name="md_theme_light_onSecondary">#16161F</color>
+    <color name="md_theme_light_secondaryContainer">#164E63</color>
+    <color name="md_theme_light_onSecondaryContainer">#CFFAFE</color>
+    <color name="md_theme_light_surface">#1E1E28</color>
+    <color name="md_theme_light_onSurface">#F7F7FA</color>
+    <color name="md_theme_light_surfaceVariant">#28283A</color>
+    <color name="md_theme_light_onSurfaceVariant">#9090A0</color>
+    <color name="md_theme_light_background">#16161F</color>
+    <color name="md_theme_light_onBackground">#F7F7FA</color>
+    <color name="md_theme_light_outline">#10FFFFFF</color>
+    <color name="md_theme_light_error">#F87171</color>
+    <color name="md_theme_light_onError">#16161F</color>
+
+</resources>

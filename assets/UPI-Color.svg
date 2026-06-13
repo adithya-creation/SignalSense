@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 28" width="200" height="28">
+  <g shape-rendering="crispEdges">
+    <rect width="85" height="28" fill="#555555"/>
+    <rect x="85" width="115" height="28" fill="#6A1B9A"/>
+  </g>
+  <g>
+    <!-- UPI Logo Icon (Solid White) -->
+    <g transform="translate(11.25, 6) scale(0.07164)">
+      <!-- Letters U, P, I -->
+      <path fill="#ffffff" d="M287,208.3a20.42,20.42,0,0,1-19.57,14.93H39.18a15.92,15.92,0,0,1-13.92-6.34,17.41,17.41,0,0,1-1.93-15.73L79,.68h44.3L73.56,179.93H250.71L300.45.68h44.29Z"/>
+      <path fill="#ffffff" d="M632.06,7Q627.53.59,617.9.59H374.48l-12,43.58H583.82L570.9,90.68H349.58L312.86,223.33h44.29l24.6-89H580.81A28,28,0,0,0,598.35,128a29.56,29.56,0,0,0,10.8-15.74l24.6-89C635.69,16.53,635.07,11.18,632.06,7Z"/>
+      <path fill="#ffffff" d="M655.05,222.24H610.83L672.29,0h44.29Z"/>
+      <!-- Triangles -->
+      <polygon fill="#ffffff" points="753.71 0.4 809.7 111.77 691.87 223.14 753.71 0.4"/>
+      <polygon fill="#ffffff" points="793.05 0.4 849.04 111.77 731.3 223.14 793.05 0.4"/>
+    </g>
+    <!-- Text -->
+    <text x="142.5" y="17.5" fill="#ffffff" font-family="Verdana, Geneva, sans-serif" font-size="10" font-weight="bold" letter-spacing="3" text-anchor="middle">SUPPORT ME</text>
+  </g>
+</svg>

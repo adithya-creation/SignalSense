@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SignalSense</string>
+    <string name="app_tagline">Know the instant your network changes.</string>
+
+    <!-- Network Types -->
+    <string name="network_5g">5G</string>
+    <string name="network_5g_sa">5G SA</string>
+    <string name="network_5g_nsa">5G NSA</string>
+    <string name="network_4g">4G</string>
+    <string name="network_3g">3G</string>
+    <string name="network_2g">2G</string>
+    <string name="network_no_data">No Data</string>
+    <string name="network_unknown">Unknown</string>
+
+    <!-- Network Subtitles -->
+    <string name="subtitle_5g">Unlimited / high-speed data</string>
+    <string name="subtitle_4g">Standard data active</string>
+    <string name="subtitle_3g">Slow data — 3G active</string>
+    <string name="subtitle_2g">Very slow — 2G active</string>
+    <string name="subtitle_no_data">Mobile data is off</string>
+    <string name="subtitle_unknown">Detecting network…</string>
+
+    <!-- Control Button -->
+    <string name="btn_start_monitoring">Start Monitoring</string>
+    <string name="btn_stop_monitoring">Stop Monitoring</string>
+
+    <!-- Stats -->
+    <string name="stat_switches">Switches</string>
+    <string name="stat_downgrades">Downgrades</string>
+    <string name="stat_uptime">Uptime</string>
+    <string name="label_recent_switches">Recent Switches</string>
+    <string name="label_switch_logs">Switch Logs</string>
+    <string name="btn_clear_log">Clear Log</string>
+    <string name="empty_log">No network switches detected yet.\nStart monitoring to track changes.</string>
+    <string name="empty_log_title">No switches detected yet</string>
+    <string name="empty_log_desc">Start monitoring to track changes</string>
+
+    <!-- Speed Display -->
+    <string name="speed_format">%1$.1f Mbps</string>
+    <string name="rtt_format">%1$d ms</string>
+    <string name="speed_rtt_format">↓ %1$.1f Mbps · %2$d ms RTT</string>
+    <string name="speed_only_format">↓ %1$.1f Mbps</string>
+
+    <!-- Log Entry -->
+    <string name="log_transition">%1$s → %2$s</string>
+    <string name="log_speed">↓ %1$.1f Mbps</string>
+
+    <!-- Persistent Notification Channels -->
+    <string name="notif_channel_monitor_name">Status Monitor</string>
+    <string name="notif_channel_monitor_desc">Shows your current network status and speed</string>
+    <string name="notif_channel_alerts_vibrate_name">Network Alerts</string>
+    <string name="notif_channel_alerts_vibrate_desc">Alerts when your mobile network changes.</string>
+
+    <string name="notif_5g_active">📶 5G SA active</string>
+    <string name="notif_5g_nsa_active">📶 5G NSA active</string>
+    <string name="notif_4g_active">📶 4G active</string>
+    <string name="notif_3g_active">⚠ 3G active — slow network</string>
+    <string name="notif_2g_active">⚠ 2G active — very slow</string>
+    <string name="notif_data_off">✕ Mobile data off</string>
+
+    <!-- Alert Notifications -->
+    <string name="alert_5g_to_4g_title">⬇ Dropped to 4G</string>
+    <string name="alert_5g_to_4g_body">Network downgraded from 5G to 4G.</string>
+    <string name="alert_4g_to_3g_title">⬇ Dropped to 3G</string>
+    <string name="alert_4g_to_3g_body">Network downgraded to 3G.</string>
+    <string name="alert_3g_to_2g_title">⬇ Dropped to 2G</string>
+    <string name="alert_3g_to_2g_body">Network downgraded to 2G.</string>
+    <string name="alert_any_downgrade_title">⬇ Network downgraded</string>
+    <string name="alert_any_downgrade_body">Your network dropped from %1$s to %2$s.</string>
+    <string name="alert_4g_to_5g_title">⬆ Back on 5G!</string>
+    <string name="alert_4g_to_5g_body">Network upgraded to 5G.</string>
+    <string name="alert_3g_to_4g_title">⬆ Upgraded to 4G</string>
+    <string name="alert_3g_to_4g_body">Network upgraded from 3G to 4G.</string>
+    <string name="alert_2g_to_3g_title">⬆ Upgraded to 3G</string>
+    <string name="alert_2g_to_3g_body">Network improved from 2G to 3G.</string>
+    <string name="alert_data_lost_title">✕ Mobile data lost</string>
+    <string name="alert_data_lost_body">Mobile data connection dropped entirely.</string>
+    <string name="alert_data_restored_title">✓ Mobile data restored</string>
+    <string name="alert_data_restored_body">Mobile data is back. Current network: %1$s.</string>
+    <string name="alert_unstable_title">⚠ Unstable signal</string>
+    <string name="alert_unstable_body">Your network has been switching rapidly. Signal may be unstable in this area.</string>
+
+    <!-- Permissions -->
+    <string name="permission_phone_state_rationale">SignalSense needs phone state permission to accurately detect your network type (5G, 4G, 3G, 2G).</string>
+    <string name="permission_notification_rationale">SignalSense needs notification permission to alert you when your network changes.</string>
+    <string name="permission_required">Permission Required</string>
+    <string name="permission_phone_denied">Phone state permission required for accurate network detection. Tap to grant.</string>
+    <string name="permission_notification_denied">Notification permission is required for alerts. Tap to open settings.</string>
+    <string name="btn_grant">Grant</string>
+    <string name="btn_dismiss">Dismiss</string>
+    <string name="btn_open_settings">Open Settings</string>
+
+    <!-- Data Limit Warning -->
+    <string name="data_limit_warning">⚠ You are on 4G. If you have a capped data plan, monitor your usage.</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_step1_title">Always Watching</string>
+    <string name="onboarding_step1_desc">SignalSense watches your mobile network 24/7</string>
+    <string name="onboarding_step2_title">Instant Alerts</string>
+    <string name="onboarding_step2_desc">Get instant alerts when your network changes</string>
+    <string name="onboarding_step3_title">Your Rules</string>
+    <string name="onboarding_step3_desc">Choose exactly which transitions alert you in Settings</string>
+    <string name="btn_get_started">Get Started</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+
+    <!-- Settings: Auto-Start Section -->
+    <string name="pref_category_autostart">Auto-Start</string>
+    <string name="pref_autostart_with_data_title">Auto-start on mobile data</string>
+    <string name="pref_autostart_with_data_summary">Monitoring begins when mobile data turns on</string>
+    <string name="pref_autostop_with_data_title">Auto-stop on mobile data</string>
+    <string name="pref_autostop_with_data_summary">Monitoring stops when mobile data is disabled</string>
+
+    <!-- Settings: Alert Triggers -->
+    <string name="pref_category_alerts">Alert Triggers</string>
+    <string name="pref_alert_downgrade_title">Network downgrade</string>
+    <string name="pref_alert_downgrade_summary">Notify when network degrades (e.g., 5G to 4G)</string>
+    <string name="pref_alert_upgrade_title">Network upgrade</string>
+    <string name="pref_alert_upgrade_summary">Notify when network improves (e.g., 4G to 5G)</string>
+    <string name="pref_alert_any_change_title">Any change</string>
+    <string name="pref_alert_any_change_summary">Notify on any network transition</string>
+    <string name="pref_alert_data_connection_title">Mobile data lost / restored</string>
+    <string name="pref_alert_data_connection_summary">Notify when mobile data is disconnected or connected</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_history">History</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Settings: Alert Behaviour -->
+    <string name="pref_category_behaviour">Alert Behaviour</string>
+    <string name="pref_vibrate_on_alert_title">Vibrate on alert</string>
+    <string name="pref_vibrate_on_alert_summary">Vibrate when network alerts are shown</string>
+    <string name="pref_manage_notifications_title">Manage notification settings</string>
+    <string name="pref_manage_notifications_summary">Configure system sound, vibration, and channels</string>
+    <string name="pref_notification_ringtone_title">Alert sound ringtone</string>
+    <string name="pref_notification_ringtone_summary">Configure the sound profile for network transitions</string>
+
+    <!-- Settings: Display -->
+    <string name="pref_category_display">Display</string>
+    <string name="pref_show_speed_title">Show live speed in status bar</string>
+    <string name="pref_show_speed_summary">Display Mbps next to persistent notification</string>
+    <string name="pref_show_ping_title">Measure live ping (RTT)</string>
+    <string name="pref_show_ping_summary">Periodically check latency and display on Home screen</string>
+    <string name="pref_show_log_title">Show switch log on home screen</string>
+    <string name="pref_show_log_summary">Display recent transitions list</string>
+    <string name="pref_limit_reminder_title">Show data limit reminder</string>
+    <string name="pref_limit_reminder_summary">Show a reminder about limited data on 4G (useful for Jio / capped plans)</string>
+
+    <!-- Settings: About -->
+    <string name="pref_category_about">About</string>
+    <string name="pref_developer_title">Developer</string>
+    <string name="pref_developer_name">Adithya Mittapally</string>
+    <string name="pref_privacy_policy_title">Privacy Policy</string>
+    <string name="pref_privacy_policy_summary">100% local, zero data collection policy</string>
+    <string name="pref_licenses_title">Open Source Licenses</string>
+    <string name="pref_licenses_summary">License notices for third-party libraries</string>
+    <string name="pref_version_title">App version</string>
+    <string name="pref_rate_title">Rate this app</string>
+    <string name="pref_rate_summary">Found SignalSense useful? Consider leaving a rating.</string>
+    <string name="pref_feedback_title">Send feedback</string>
+    <string name="pref_feedback_summary">Report bugs or suggest features</string>
+    <string name="pref_website_title">Visit website</string>
+    <string name="pref_website_summary">signalsense.vercel.app</string>
+    <string name="feedback_email">contactme.adithya@gmail.com</string>
+    <string name="feedback_subject">SignalSense Feedback — v%1$s</string>
+
+
+    <!-- Settings: Advanced -->
+    <string name="pref_category_advanced">Advanced</string>
+    <string name="pref_sim_slot_title">Monitor SIM slot</string>
+    <string name="pref_sim_slot_summary">Which SIM to monitor on dual-SIM phones. Auto uses the active data SIM.</string>
+    <string name="pref_autostart_on_boot_title">Auto-start on device boot</string>
+    <string name="pref_autostart_on_boot_summary">Start monitoring automatically when the phone boots up</string>
+
+    <!-- Support & Donate -->
+
+    <string name="pref_category_support">Support</string>
+
+    <string name="pref_support_upi_title">UPI</string>
+    <string name="pref_support_upi_summary">Recommended for supporters in India</string>
+    <string name="pref_support_upi_toast">UPI ID copied: adithyamittapally@ptaxis</string>
+
+    <string name="pref_support_kofi_title">Ko-fi</string>
+    <string name="pref_support_kofi_summary">Show your support by buying a coffee</string>
+
+    <string name="pref_support_github_title">GitHub Sponsors</string>
+    <string name="pref_support_github_summary">Support for ongoing and future development</string>
+
+    <!-- Settings: Battery Optimization -->
+    <string name="pref_battery_opt_title">Ignore Battery Optimizations</string>
+    <string name="pref_battery_opt_summary">Disable throttling for instant auto-start</string>
+    <string name="pref_battery_opt_active_summary">Optimizations disabled. Tap to verify settings if alerts are delayed.</string>
+    <string name="pref_battery_opt_status_active">Active ✓</string>
+    <string name="pref_battery_opt_status_not_set">Not set</string>
+
+    <!-- Background Restrictions Check Dialog -->
+    <string name="oem_dialog_title">Background Restrictions Check</string>
+    <string name="oem_dialog_btn_open_settings">Open Settings</string>
+    <string name="oem_dialog_btn_not_now">Not Now</string>
+    <string name="oem_dialog_body_generic">Battery optimization is disabled for SignalSense.\n\nSignalSense is allowed to run without Android battery restrictions. If monitoring or alerts become unreliable, verify that your device does not apply additional background restrictions.</string>
+    <string name="oem_dialog_body_samsung">Battery optimization is disabled for SignalSense.\n\nHowever, Samsung devices may place background apps into \'Deep Sleep\'.\n\nTo ensure reliable operation, consider adding SignalSense to \'Never sleeping apps\' under Battery settings.</string>
+    <string name="oem_dialog_body_other_oems">Battery optimization is disabled for SignalSense.\n\nHowever, some devices (Xiaomi, Redmi, POCO, OPPO, Realme, OnePlus, and Vivo) may apply additional background restrictions that can affect automatic monitoring and alerts.\n\nTo ensure reliable operation, verify that SignalSense is allowed to run unrestricted in the background.</string>
+</resources>

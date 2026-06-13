@@ -1,0 +1,11 @@
+Initial release of SignalSense.
+
+• Real-time 5G / 4G / 3G / 2G network monitoring
+• Instant notifications on network transitions
+• Live speed and ping display
+• Full switch history log
+• Customizable alert triggers
+• Auto-start / auto-stop with mobile data
+• Boot auto-start support
+• Dual SIM slot selector
+• No ads, no tracking, fully open source

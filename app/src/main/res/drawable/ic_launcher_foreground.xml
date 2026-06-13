@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Symmetrical Signal Bell (Accent color #4ADE80) -->
+    <!-- Bar 1 (Leftmost, Short) -->
+    <path
+        android:strokeWidth="5.0"
+        android:strokeLineCap="round"
+        android:strokeColor="#4ADE80"
+        android:pathData="M 36,52 L 36,64" />
+    <!-- Bar 2 (Medium) -->
+    <path
+        android:strokeWidth="5.0"
+        android:strokeLineCap="round"
+        android:strokeColor="#4ADE80"
+        android:pathData="M 45,42 L 45,64" />
+    <!-- Bar 3 (Center, Tallest) -->
+    <path
+        android:strokeWidth="5.0"
+        android:strokeLineCap="round"
+        android:strokeColor="#4ADE80"
+        android:pathData="M 54,34 L 54,64" />
+    <!-- Bar 4 (Medium) -->
+    <path
+        android:strokeWidth="5.0"
+        android:strokeLineCap="round"
+        android:strokeColor="#4ADE80"
+        android:pathData="M 63,42 L 63,64" />
+    <!-- Bar 5 (Rightmost, Short) -->
+    <path
+        android:strokeWidth="5.0"
+        android:strokeLineCap="round"
+        android:strokeColor="#4ADE80"
+        android:pathData="M 72,52 L 72,64" />
+
+    <!-- Center clapper dot -->
+    <path
+        android:strokeWidth="6.5"
+        android:strokeLineCap="round"
+        android:strokeColor="#4ADE80"
+        android:pathData="M 54,74 L 54,74" />
+
+    <!-- Recycle/Refresh thin loop (Muted color #3A3D4D) -->
+    <!-- Left Arc -->
+    <path
+        android:strokeWidth="1.2"
+        android:strokeColor="#3A3D4D"
+        android:strokeLineCap="round"
+        android:pathData="M 48,86.5 A 33,33 0 0,1 21,54 A 33,33 0 0,1 48,21.5" />
+    <!-- Top Arrowhead -->
+    <path
+        android:strokeWidth="1.2"
+        android:strokeColor="#3A3D4D"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M 44,18 L 48,21.5 L 44,25" />
+
+    <!-- Right Arc -->
+    <path
+        android:strokeWidth="1.2"
+        android:strokeColor="#3A3D4D"
+        android:strokeLineCap="round"
+        android:pathData="M 60,21.5 A 33,33 0 0,1 87,54 A 33,33 0 0,1 60,86.5" />
+    <!-- Bottom Arrowhead -->
+    <path
+        android:strokeWidth="1.2"
+        android:strokeColor="#3A3D4D"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M 64,83 L 60,86.5 L 64,90" />
+
+</vector>

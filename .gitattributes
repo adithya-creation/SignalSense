@@ -1,0 +1,13 @@
+# Set default behavior to automatically normalize line endings
+* text=auto
+
+# Force Unix LF for shell scripts
+gradlew text eol=lf
+
+# Treat binary files correctly
+*.ttf binary
+*.jar binary
+*.apk binary
+*.aab binary
+*.png binary
+*.webp binary

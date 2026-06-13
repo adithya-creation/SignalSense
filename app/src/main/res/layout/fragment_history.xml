@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://tools.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_app">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="48dp"
+        android:paddingBottom="100dp"
+        app:layout_constraintWidth_max="600dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Header: "LOG" label + "Recent Switches" h1 + Clear button -->
+        <!-- matches Lovable: header mb-10 flex items-end justify-between -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SIGNAL SENSE"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/geist"
+                    android:textStyle="normal"
+                    android:letterSpacing="0.22"
+                    android:textAllCaps="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/label_switch_logs"
+                    android:textColor="@color/text_primary"
+                    android:textSize="28sp"
+                    android:fontFamily="@font/geist"
+                    android:textStyle="normal"
+                    android:letterSpacing="-0.02" />
+            </LinearLayout>
+
+            <!-- Clear button — text-sm text-muted-foreground -->
+            <TextView
+                android:id="@+id/btnClearLog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:text="@string/btn_clear_log"
+                android:textSize="13sp"
+                android:fontFamily="@font/geist"
+                android:textColor="@color/text_secondary"
+                android:paddingStart="8dp" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <!-- Empty state — matches Lovable: flex min-h-[50vh] flex-col items-center justify-center -->
+            <LinearLayout
+                android:id="@+id/tvEmptyLog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="40dp"
+                android:visibility="visible">
+
+                <!-- Icon card — h-16 w-16 rounded-2xl border border-border bg-card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/bg_card"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/card_border">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_signal_bars"
+                        android:alpha="0.5" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- "No switches detected yet" -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/empty_log_title"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:fontFamily="@font/geist"
+                    android:textColor="@color/text_primary" />
+
+                <!-- "Start monitoring to track changes" -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/empty_log_desc"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:fontFamily="@font/geist"
+                    android:textColor="@color/text_secondary" />
+
+            </LinearLayout>
+
+            <!-- Switch Log list -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSwitchLog"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="12dp"
+                android:clipToPadding="false"
+                android:visibility="gone"
+                tools:listitem="@layout/item_switch_log"
+                tools:itemCount="6" />
+        </FrameLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

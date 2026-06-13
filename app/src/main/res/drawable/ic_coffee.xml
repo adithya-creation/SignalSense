@@ -1,0 +1,62 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <group
+        android:pivotX="12"
+        android:pivotY="12"
+        android:scaleY="1.25">
+
+        <!-- Cup -->
+        <path
+            android:fillColor="@android:color/transparent"
+            android:strokeColor="#4ADE80"
+            android:strokeWidth="1.8"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:pathData="
+                M6,7
+                H18
+                C19.1,7 20,7.9 20,9
+                V12
+                C20,15 18.2,17 12,17
+                C5.8,17 4,15 4,12
+                V9
+                C4,7.9 4.9,7 6,7 Z" />
+
+        <!-- Handle -->
+        <path
+            android:fillColor="@android:color/transparent"
+            android:strokeColor="#4ADE80"
+            android:strokeWidth="1.8"
+            android:strokeLineCap="round"
+            android:pathData="
+                M20,9
+                C22,9 23,10.2 23,12
+                C23,13.8 22,15 20,15" />
+
+        <!-- Heart -->
+        <path
+            android:fillColor="#4ADE80"
+            android:pathData="
+                M12,11
+                C11,9.5 9,9.5 9,11.3
+                C9,13 10.5,14.2 12,15.2
+                C13.5,14.2 15,13 15,11.3
+                C15,9.5 13,9.5 12,11 Z" />
+
+        <!-- Saucer -->
+        <path
+            android:fillColor="@android:color/transparent"
+            android:strokeColor="#4ADE80"
+            android:strokeWidth="1.4"
+            android:strokeLineCap="round"
+            android:pathData="
+                M3,18
+                C6,17 18,17 21,18
+                C18,19 6,19 3,18 Z" />
+
+    </group>
+</vector>

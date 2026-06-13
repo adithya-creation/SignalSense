@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_app">
+
+    <!-- Content — leaves space for floating dock (64dp height + 20dp margin + 16dp buffer) -->
+    <FrameLayout
+        android:id="@+id/nav_host_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        />
+
+    <!--
+        Floating pill dock — matches Lovable BottomNav.tsx:
+          nav: "fixed bottom-5 left-1/2 -translate-x-1/2 z-50"
+          div: "flex items-center gap-1 rounded-full border border-border bg-card/80 px-2 py-2 backdrop-blur-xl shadow"
+          Active item: bg-primary w-16 h-11 (60dp wide × 44dp tall pill)
+          Inactive item: h-11 w-11 (44dp circle)
+    -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/bottomDockCard"
+        android:layout_width="176dp"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="24dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="24dp"
+        app:cardBackgroundColor="@color/bg_nav"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/dock_stroke">
+
+        <!-- Custom Horizontal Layout for 3 Dock Tabs -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="8dp">
+
+            <!-- Home Tab (Active by default, 64dp) -->
+            <FrameLayout
+                android:id="@+id/dock_home"
+                android:layout_width="64dp"
+                android:layout_height="44dp"
+                android:layout_marginEnd="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless">
+
+                <View
+                    android:id="@+id/indicator_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_dock_indicator" />
+
+                <ImageView
+                    android:id="@+id/icon_home"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_home"
+                    android:contentDescription="Home" />
+            </FrameLayout>
+
+            <!-- History Tab (Inactive by default, 44dp) -->
+            <FrameLayout
+                android:id="@+id/dock_history"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginEnd="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless">
+
+                <View
+                    android:id="@+id/indicator_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    android:background="@drawable/bg_dock_indicator" />
+
+                <ImageView
+                    android:id="@+id/icon_history"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_history"
+                    android:contentDescription="History" />
+            </FrameLayout>
+
+            <!-- Settings Tab (Inactive by default, 44dp) -->
+            <FrameLayout
+                android:id="@+id/dock_settings"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless">
+
+                <View
+                    android:id="@+id/indicator_settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    android:background="@drawable/bg_dock_indicator" />
+
+                <ImageView
+                    android:id="@+id/icon_settings"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_settings"
+                    android:contentDescription="Settings" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
