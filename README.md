@@ -58,24 +58,22 @@ SignalSense alerts you the instant your network changes – so you're always the
 <table align="center">
   <tr valign="top">
     <td align="center">
-      <b>Home - 5G SA Active</b><br><br>
-      <img src="https://raw.githubusercontent.com/adithya-creation/SignalSense/main/assets/SignalSense%20-%205G.jpg" width="200" alt="SignalSense home screen showing 5G SA active with live speed and ping"/>
+      <img src="store-assets/1.jpg" width="165" alt="SignalSense home screen showing 5G SA active with live speed and ping stats"/>
     </td>
     <td align="center">
-      <b>Home - 4G Active</b><br><br>
-      <img src="https://raw.githubusercontent.com/adithya-creation/SignalSense/main/assets/SignalSense%20-%204G.jpg" width="200" alt="SignalSense home screen showing 4G LTE active with downgrade warning"/>
+      <img src="store-assets/2.jpg" width="165" alt="SignalSense notification shade showing network transition alerts such as Dropped to 4G and Back on 5G"/>
     </td>
     <td align="center">
-      <b>Switch Logs</b><br><br>
-      <img src="https://raw.githubusercontent.com/adithya-creation/SignalSense/main/assets/SignalSense%20-%20Logs.jpg" width="200" alt="SignalSense switch history log showing timestamped network transitions"/>
+      <img src="store-assets/3.jpg" width="165" alt="SignalSense settings screen demonstrating auto-start and auto-stop monitoring toggles on mobile data"/>
     </td>
     <td align="center">
-      <b>Settings</b><br><br>
-      <img src="https://raw.githubusercontent.com/adithya-creation/SignalSense/main/assets/SignalSense%20-%20Settings.jpg" width="200" alt="SignalSense settings screen showing alert trigger and auto-start options"/>
+      <img src="store-assets/4.jpg" width="165" alt="SignalSense home screen showing 4G active with a warning about standard data usage and daily data cap being used"/>
     </td>
     <td align="center">
-      <b>Notifications</b><br><br>
-      <img src="https://raw.githubusercontent.com/adithya-creation/SignalSense/main/assets/SignalSense%20-%20Notify.jpg" width="200" alt="SignalSense network change alert notification shown as heads-up"/>
+      <img src="store-assets/5.jpg" width="165" alt="SignalSense Switch Logs screen showing history of network transitions with timestamps and connection speeds"/>
+    </td>
+    <td align="center">
+      <img src="store-assets/6.jpg" width="165" alt="SignalSense settings screen showing customizable alert trigger options"/>
     </td>
   </tr>
 </table>
