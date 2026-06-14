@@ -1,6 +1,6 @@
 Frustrated by silent drops from 5G to 4G? SignalSense alerts you the instant your network changes – so you're always the first to know.
 
-SignalSense watches your mobile network 24/7 and alerts you the instant your connection changes – so you always know if you're on 5G, 4G, 3G, or 2G.
+SignalSense continuously monitors your mobile network and notifies you whenever your connection switches between 5G, 4G, 3G, or 2G, helping you identify network issues before they affect calls, streaming, gaming, or downloads.
 
 FEATURES
 
