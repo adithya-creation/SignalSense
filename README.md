@@ -55,16 +55,30 @@ SignalSense alerts you the instant your network changes – so you're always the
 
 <h2>📸 Screenshots</h2>
 
-<p align="center">
-  <img src="store-assets/1.jpg" width="310" alt="SignalSense home screen showing 5G SA active with live speed and ping stats"/>
-  <img src="store-assets/2.jpg" width="310" alt="SignalSense notification shade showing network transition alerts such as Dropped to 4G and Back on 5G"/>
-  <img src="store-assets/3.jpg" width="310" alt="SignalSense settings screen demonstrating auto-start and auto-stop monitoring toggles on mobile data"/>
-</p>
-<p align="center">
-  <img src="store-assets/4.jpg" width="310" alt="SignalSense home screen showing 4G active with a warning about standard data usage and daily data cap being used"/>
-  <img src="store-assets/5.jpg" width="310" alt="SignalSense Switch Logs screen showing history of network transitions with timestamps and connection speeds"/>
-  <img src="store-assets/6.jpg" width="310" alt="SignalSense settings screen showing customizable alert trigger options"/>
-</p>
+<table align="center">
+  <tr valign="top">
+    <td align="center">
+      <img src="store-assets/1.jpg" width="256" alt="SignalSense home screen showing 5G SA active with live speed and ping stats"/>
+    </td>
+    <td align="center">
+      <img src="store-assets/2.jpg" width="256" alt="SignalSense notification shade showing network transition alerts such as Dropped to 4G and Back on 5G"/>
+    </td>
+    <td align="center">
+      <img src="store-assets/3.jpg" width="256" alt="SignalSense settings screen demonstrating auto-start and auto-stop monitoring toggles on mobile data"/>
+    </td>
+  </tr>
+  <tr valign="top">
+    <td align="center">
+      <img src="store-assets/4.jpg" width="256" alt="SignalSense home screen showing 4G active with a warning about standard data usage and daily data cap being used"/>
+    </td>
+    <td align="center">
+      <img src="store-assets/5.jpg" width="256" alt="SignalSense Switch Logs screen showing history of network transitions with timestamps and connection speeds"/>
+    </td>
+    <td align="center">
+      <img src="store-assets/6.jpg" width="256" alt="SignalSense settings screen showing customizable alert trigger options"/>
+    </td>
+  </tr>
+</table>
 
 <hr>
 
