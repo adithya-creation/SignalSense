@@ -54,6 +54,9 @@ android {
             if (keystorePropertiesFile.exists()) {
                 signingConfig = signingConfigs.getByName("release")
             }
+            vcsInfo {
+                include = false
+            }
         }
     }
 
