@@ -11,7 +11,7 @@ FEATURES
 - Custom Ringtones & Vibration Control  
   Choose your own custom ringtone and control vibration settings for network alerts.
 - Live Speed and Ping  
-  See your real-time download speed and latency directly on the home screen. Updated every second from your device.
+  See real-time download and upload speeds in the persistent notification, and live ping on the home screen.
 - Call-Aware Alerts  
   Alerts are automatically held during active phone calls and fired after the call ends. No interruptions at the wrong moment.
 - Anti-Spam Debouncing  
