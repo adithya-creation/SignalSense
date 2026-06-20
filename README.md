@@ -1,24 +1,26 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/adithya-creation/SignalSense/main/assets/SignalSense%20-%20Icon.jpg" width="96" style="border-radius: 20%;" alt="SignalSense Icon"/>
-  <h1>SignalSense</h1>
-  <h3>Know the instant your mobile network switches between 5G, 4G, 3G or 2G</h3>
+  <a href="https://signalsense.vercel.app">
+    <img src="https://readme-typing-svg.demolab.com/?font=Roboto&weight=700&size=36&duration=4000&pause=99999&color=4ADE80&center=true&vCenter=true&repeat=false&width=700&height=60&lines=SignalSense+%E2%80%93+Network+Switch+Alerts" alt="SignalSense – Network Switch Alerts"/>
+  </a>
+
+  <p>Know the instant your network switches between 5G, 4G, 3G, or 2G</p>
 
   <p>
-    <a href="https://github.com/adithya-creation/SignalSense/releases">
-      <img src="https://img.shields.io/github/v/release/adithya-creation/SignalSense?label=Download&style=for-the-badge&color=4ADE80" alt="Download Latest">
-    </a>
-    <a href="https://github.com/adithya-creation/SignalSense/releases">
-      <img src="https://img.shields.io/github/downloads/adithya-creation/SignalSense/total?style=for-the-badge&color=4ADE80" alt="Total Downloads">
+    <a href="#install">
+      <img src="https://img.shields.io/github/v/release/adithya-creation/SignalSense?label=Download&style=for-the-badge&color=lightgreen" alt="Download Latest">
     </a>
     <a href="https://ko-fi.com/adithyaglobal">
       <img src="https://img.shields.io/badge/Support-Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Support on Ko-fi">
     </a>
-    <img src="https://img.shields.io/badge/Android-8.0%2B-brightgreen?style=for-the-badge&logo=android" alt="Android 8.0+">
+    <a href="https://github.com/adithya-creation/SignalSense/releases">
+      <img src="https://img.shields.io/github/downloads/adithya-creation/SignalSense/total?style=for-the-badge&color=blue" alt="Total Downloads">
+    </a>
   </p>
 
 </div>
 
-<hr>
+---
 
 <h2>📡 About SignalSense</h2>
 
@@ -198,7 +200,7 @@ SignalSense alerts you the instant your network changes – so you're always the
   <table border="0" cellpadding="15" cellspacing="0" width="85%">
     <tr>
       <td align="center">
-        <h3>💖 Support the Project</h3>
+        <h2>💖 Support the Project</h2>
         <p>If SignalSense has helped you stay in control of your connection, consider supporting development. Your support keeps this app free, open-source, and actively maintained.</p>
         <br>
         <a href="https://ko-fi.com/adithyaglobal">
@@ -221,13 +223,26 @@ SignalSense alerts you the instant your network changes – so you're always the
 
 <hr>
 
-<h2>📲 Install</h2>
+<h2 id="install">📲 Download/Install</h2>
 
-<h3>GitHub Releases</h3>
-<p>Download the latest signed APK directly from the <a href="https://github.com/adithya-creation/SignalSense/releases">Releases</a> section.</p>
+<div align="center">
+  <p>Choose your preferred installation method</p>
+
+<a href="https://github.com/adithya-creation/SignalSense/releases/latest/">
+  <img src="https://user-images.githubusercontent.com/69304392/148696068-0cfea65d-b18f-4685-82b5-329a330b1c0d.png" height="81" style="vertical-align: middle;" alt="Get it on GitHub">
+</a>
+&nbsp;&nbsp;
+<a href="https://appgallery.huawei.com/app/C118044423">
+  <img src="assets/appgallery-badge.svg" height="54" style="vertical-align: middle;" alt="Explore it on Huawei AppGallery">
+</a>
+&nbsp;&nbsp;
+<a href="https://apt.izzysoft.de/fdroid/index/apk/com.signalsense.app">
+  <img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroidButtonGreyBorder_nofont.png" height="54" style="vertical-align: middle;" alt="Get it on IzzyOnDroid">
+</a>
+
+</div>
 
 
-<hr>
 
 <h2>🤝 Contributing</h2>
 
