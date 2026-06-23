@@ -1,7 +1,7 @@
 <div align="center">
 
   <a href="https://signalsense.vercel.app">
-    <img src="assets/SignalSense%20-%20Icon%20R.png" alt="SignalSense Icon" width="150"/>
+    <img src="assets/SignalSense%20-%20Icon%20R.png" alt="SignalSense Icon" width="200"/>
   </a>
   <br>
   <h1>SignalSense</h1>
