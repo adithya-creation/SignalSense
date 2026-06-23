@@ -1,7 +1,7 @@
 <div align="center">
 
   <a href="https://signalsense.vercel.app">
-    <img src="https://raw.githubusercontent.com/adithya-creation/SignalSense/main/assets/SignalSense%20-%20Icon.jpg" alt="SignalSense Icon" style="border-radius: 20%; width: 35%;"/>
+    <img src="assets/SignalSense%20-%20Icon%20R.png" alt="SignalSense Icon" style="width: 35%; max-width: 160px;"/>
   </a>
   <br>
   <h1>SignalSense</h1>
@@ -236,15 +236,15 @@ SignalSense alerts you the instant your network changes – so you're always the
 </a>
 &nbsp;&nbsp;
 <a href="https://f-droid.org/packages/com.signalsense.app/">
-  <img src="https://f-droid.org/badge/get-it-on.svg" height="80" style="vertical-align: middle;" alt="Get it on F-Droid">
+  <img src="https://f-droid.org/badge/get-it-on.svg" height="70" style="vertical-align: middle;" alt="Get it on F-Droid">
 </a>
 &nbsp;&nbsp;
 <a href="https://appgallery.huawei.com/app/C118044423">
-  <img src="assets/appgallery-badge.svg" height="60" style="vertical-align: middle;" alt="Explore it on Huawei AppGallery">
+  <img src="assets/appgallery-badge.svg" height="70" style="vertical-align: middle;" alt="Explore it on Huawei AppGallery">
 </a>
 &nbsp;&nbsp;
 <a href="https://apt.izzysoft.de/fdroid/index/apk/com.signalsense.app">
-  <img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroidButtonGreyBorder_nofont.png" height="60" style="vertical-align: middle;" alt="Get it on IzzyOnDroid">
+  <img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroidButtonGreyBorder_nofont.png" height="70" style="vertical-align: middle;" alt="Get it on IzzyOnDroid">
 </a>
 
 </div>
