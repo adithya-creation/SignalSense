@@ -1,7 +1,7 @@
 <div align="center">
 
   <a href="https://signalsense.vercel.app">
-    <img src="assets/SignalSense%20-%20Icon%20R.png" alt="SignalSense Icon" style="width: 50%; max-width: 120px;"/>
+    <img src="assets/SignalSense%20-%20Icon%20R.png" alt="SignalSense Icon" width="120"/>
   </a>
   <br>
   <h1>SignalSense</h1>
@@ -232,23 +232,23 @@ SignalSense alerts you the instant your network changes – so you're always the
   <p>Choose your preferred installation method</p>
 
 <a href="https://github.com/adithya-creation/SignalSense/releases/latest/">
-  <img src="https://user-images.githubusercontent.com/69304392/148696068-0cfea65d-b18f-4685-82b5-329a330b1c0d.png" height="45" style="vertical-align: middle;" alt="Get it on GitHub">
+  <img src="https://user-images.githubusercontent.com/69304392/148696068-0cfea65d-b18f-4685-82b5-329a330b1c0d.png" height="60" style="vertical-align: middle;" alt="Get it on GitHub">
 </a>
 &nbsp;&nbsp;
 <a href="https://f-droid.org/packages/com.signalsense.app/">
-  <img src="https://f-droid.org/badge/get-it-on.svg" height="45" style="vertical-align: middle;" alt="Get it on F-Droid">
+  <img src="https://f-droid.org/badge/get-it-on.svg" height="62" style="vertical-align: middle;" alt="Get it on F-Droid">
 </a>
 &nbsp;&nbsp;
 <a href="https://appgallery.huawei.com/app/C118044423">
-  <img src="assets/appgallery-badge.svg" height="45" style="vertical-align: middle;" alt="Explore it on Huawei AppGallery">
+  <img src="assets/appgallery-badge.svg" height="44" style="vertical-align: middle;" alt="Explore it on Huawei AppGallery">
 </a>
 &nbsp;&nbsp;
 <a href="https://apt.izzysoft.de/fdroid/index/apk/com.signalsense.app">
-  <img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroidButtonGreyBorder_nofont.png" height="45" style="vertical-align: middle;" alt="Get it on IzzyOnDroid">
+  <img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroidButtonGreyBorder_nofont.png" height="44" style="vertical-align: middle;" alt="Get it on IzzyOnDroid">
 </a>
 &nbsp;&nbsp;
 <a href="https://signalsense.vercel.app/#download">
-  <img src="assets/oppo-realme-badge.svg" height="45" style="vertical-align: middle;" alt="Get it on OPPO / Realme App Market">
+  <img src="assets/oppo-realme-badge.svg" height="44" style="vertical-align: middle;" alt="Get it on OPPO / Realme App Market">
 </a>
 
 </div>
